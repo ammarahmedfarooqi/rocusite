@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - RoCu Martial Arts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: red;
+            border: 2px solid black;
+            padding: 0 10px;
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+        .navbar a {
+            flex: 1;
+            text-align: center;
+            color: white;
+            padding: 14px 0;
+            text-decoration: none;
+            border-right: 1px solid black;
+        }
+        .navbar a:last-child {
+            border-right: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .about-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .about-section h1 {
+            font-size: 2.5em;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .about-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .about-images img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid black;
+            margin: 10px;
+        }
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        footer .footer-content div {
+            margin: 10px;
+        }
+        footer .footer-content img {
+            height: 50px;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 10px;
+        }
+        thead {
+            background-color: red;
+            color: white;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+        td {
+            vertical-align: top;
+        }
+        td:first-child {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="../Downloads/RoCu_Martial_Arts__1_-removebg-preview.png" alt="RoCu Logo">
+            <span style="color: white; font-size: 1.2em; font-weight: bold;">RoCu Martial Arts</span>
+        </div>
+        <a href="rocusite.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="schedule.html">Schedule</a>
+    </div>
+
+    <div class="content">
+        <div class="about-section">
+            <h1>About RoCu Martial Arts</h1>
+            <p>At RoCu, we offer a variety of martial arts disciplines, including Judo, Muay Thai, Jiu-Jitsu, and Karate. Our experienced instructors are passionate about sharing their knowledge and helping students achieve their personal and martial arts goals.</p>
+            <p>We believe in fostering a supportive and inclusive environment where everyone can thrive. Whether you're looking to compete, stay fit, or learn self-defense, RoCu Martial Arts is the place for you.</p>
+        </div>
+
+        <div class="about-images">
+            <img src="../Downloads/istockphoto-1252207646-612x612.jpg" alt="Martial Arts Training">
+            <img src="../Downloads/istockphoto-1297682099-612x612.jpg" alt="Training Session">
+            <img src="../Downloads/istockphoto-1399196250-612x612.jpg" alt="Martial Arts Facility">
+        </div>
+
+        <table>
+            <caption>Instructor Details</caption>
+            <thead>
+                <tr>
+                    <th>Name and Job</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mauricio Gomez (gym owner/head martial arts coach)</td>
+                    <td>
+                        Coaches in all martial arts<br>
+                        4th Dan Blackbelt judo<br>
+                        3rd Dan Blackbelt jiu-jitsu<br>
+                        1st Dan Blackbelt karate<br>
+                        Accredited Muay Thai coach
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sarah Nova (assistant martial arts coach)</td>
+                    <td>5th Dan karate</td>
+                </tr>
+                <tr>
+                    <td>Guy Victory (assistant martial arts coach)</td>
+                    <td>
+                        2nd Dan Blackbelt jiu-jitsu<br>
+                        1st Dan Blackbelt judo
+                    </td>
+                </tr>
+                <tr>
+                    <td>Morris Davis (assistant martial arts coach)</td>
+                    <td>
+                        Accredited Muay Thai coach<br>
+                        3rd Dan Blackbelt karate
+                    </td>
+                </tr>
+                <tr>
+                    <td>Traci Santiago (fitness coach)</td>
+                    <td>
+                        BSc in Sports Science<br>
+                        Qualified in health and nutrition<br>
+                        Specialises in devising strength and conditioning programs for combat athletes
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harpreet Kaur (fitness coach)</td>
+                    <td>
+                        BSc in Physiotherapy<br>
+                        MSc in Sports Science
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <img src="../Downloads/RoCu_Martial_Arts__1_-removebg-preview.png" alt="RoCu Logo">
+                <p>&copy; 2024 RoCu Martial Arts. All rights reserved.</p>
+                <p>Trademark of RoCu Martial Arts</p>
+            </div>
+            <div>
+                <p>Phone: +123-456-7890</p>
+                <p>Email: info@rocumartialarts.com</p>
+                <p><a href="#home">Back to top</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

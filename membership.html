@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .membership-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .membership-option label {
+            cursor: pointer;
+        }
+        .membership-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        .membership-option .price {
+            font-weight: bold;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn-container button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-container button:hover {
+            background-color: darkred;
+        }
+        .membership-info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: none; /* Initially hide membership info */
+        }
+        .membership-info p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to RoCu Martial Arts!</h1>
+        <div id="greeting"></div> <!-- This div will show the greeting -->
+        <h2>Choose Your Membership</h2>
+
+        <div class="membership-option">
+            <input type="radio" id="basic" name="membership" value="basic">
+            <label for="basic">Basic (1 martial art - 2 sessions per week) - monthly fee <span class="price">£25.00</span></label>
+        </div>
+
+        <div class="membership-option">
+            <input type="radio" id="intermediate" name="membership" value="intermediate">
+            <label for="intermediate">Intermediate (1 martial art - 3 sessions per week) - monthly fee <span class="price">£35.00</span></label>
+        </div>
+
+        <div class="membership-option">
+            <input type="radio" id="advanced" name="membership" value="advanced">
+            <label for="advanced">Advanced (any 2 martial arts - 5 sessions per week) - monthly fee <span class="price">£45.00</span></label>
+        </div>
+
+        <div class="membership-option">
+            <input type="radio" id="elite" name="membership" value="elite">
+            <label for="elite">Elite (Unlimited classes) <span class="price">£60.00</span></label>
+        </div>
+
+        <div class="membership-option">
+            <input type="radio" id="private" name="membership" value="private">
+            <label for="private">Private martial arts tuition - per hour <span class="price">£15.00</span></label>
+        </div>
+
+        <div class="membership-option">
+            <input type="radio" id="junior" name="membership" value="junior">
+            <label for="junior">Junior membership - can attend all-kids martial arts sessions <span class="price">£25.00</span></label>
+        </div>
+
+        <div class="btn-container">
+            <button onclick="confirmMembership()">Confirm Membership</button>
+        </div>
+
+        <!-- Membership confirmation info -->
+        <div id="membershipConfirmation" class="membership-info">
+            <h2>Your Current Membership</h2>
+            <p id="membershipDetails"></p>
+            <h2>Choose New Membership</h2>
+            <!-- Options to pick different memberships -->
+            <div class="membership-option">
+                <input type="radio" id="newBasic" name="newMembership" value="basic">
+                <label for="newBasic">Basic (1 martial art - 2 sessions per week) - monthly fee <span class="price">£25.00</span></label>
+            </div>
+
+            <div class="membership-option">
+                <input type="radio" id="newIntermediate" name="newMembership" value="intermediate">
+                <label for="newIntermediate">Intermediate (1 martial art - 3 sessions per week) - monthly fee <span class="price">£35.00</span></label>
+            </div>
+
+            <div class="membership-option">
+                <input type="radio" id="newAdvanced" name="newMembership" value="advanced">
+                <label for="newAdvanced">Advanced (any 2 martial arts - 5 sessions per week) - monthly fee <span class="price">£45.00</span></label>
+            </div>
+
+            <div class="membership-option">
+                <input type="radio" id="newElite" name="newMembership" value="elite">
+                <label for="newElite">Elite (Unlimited classes) <span class="price">£60.00</span></label>
+            </div>
+
+            <div class="membership-option">
+                <input type="radio" id="newPrivate" name="newMembership" value="private">
+                <label for="newPrivate">Private martial arts tuition - per hour <span class="price">£15.00</span></label>
+            </div>
+
+            <div class="membership-option">
+                <input type="radio" id="newJunior" name="newMembership" value="junior">
+                <label for="newJunior">Junior membership - can attend all-kids martial arts sessions <span class="price">£25.00</span></label>
+            </div>
+
+            <div class="btn-container">
+                <button onclick="updateMembership()">Confirm New Membership</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

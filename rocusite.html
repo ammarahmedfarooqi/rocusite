@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoCu Martial Arts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set minimum height to full viewport height */
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: red;
+            border: 2px solid black;
+            padding: 0 10px;
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-logo img {
+            height: 60px; /* Increase the height of the logo */
+            margin-right: 10px;
+        }
+        .navbar a {
+            flex: 1;
+            text-align: center;
+            color: white;
+            padding: 14px 0;
+            text-decoration: none;
+            border-right: 1px solid black;
+        }
+        .navbar a:last-child {
+            border-right: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .carousel {
+            position: relative;
+            width: 100%; /* Take up full width */
+            overflow: hidden;
+            border: 2px solid black; /* Add an outline */
+        }
+        .carousel img {
+            width: 100%;
+        }
+        .carousel-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .constant-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            max-width: 80%; /* Adjust this as needed */
+        }
+        .text1 {
+            width: 100%;
+            height: auto;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .service {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+        }
+        .service img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid black;
+        }
+        .service-text {
+            color: black;
+            margin-top: 10px;
+        }
+        .facilities {
+            background-color: #f8f8f8;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .facility {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+        }
+        .facility img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+        .facility h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .facility p {
+            color: #555;
+            max-width: 600px;
+        }
+        footer {
+            background-color: red; /* Matches the red color used in the navbar */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        footer .footer-content div {
+            margin: 10px;
+        }
+        footer .footer-content img {
+            height: 50px;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        .form-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            background-color: #f8f8f8;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-container input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="../Downloads/RoCu_Martial_Arts__1_-removebg-preview.png" alt="RoCu Logo">
+            <span style="color: white; font-size: 1.2em; font-weight: bold;">RoCu Martial Arts</span>
+        </div>
+        <a href="rocusite.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="schedule.html">Schedule</a>
+    </div>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="../Downloads/istockphoto-1252207646-612x612.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="../Downloads/istockphoto-1297682099-612x612.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="../Downloads/istockphoto-1399196250-612x612.jpg" alt="Image 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="../Downloads/depositphotos_172900778-stock-photo-young-man-practicing-karate-in.jpg" alt="Image 4">
+            </div>
+        </div>
+        <div class="constant-text">Welcome to RoCu Martial Arts, where discipline meets determination and tradition merges with innovation. Step into our dojo, where every punch, kick, and block is infused with purpose and passion. Whether you're a seasoned practitioner or taking your first steps on the martial arts journey, our experienced instructors are here to guide you toward your goals. Join us and unleash your inner warrior as you embark on a path of self-discovery, strength, and mastery. Begin your martial arts journey with RoCu today.</div>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="text1">
+        <h1>Best Martial Arts Training Classes in the Country</h1>
+        <h3>We have carefully selected the most comprehensive martial art disciplines. All-around physical development through activities that are fun and challenging at the same time is our primary goal. Selected programs can be practiced from age 6 till late adulthood.</h3>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services">
+        <div class="service">
+            <img src="../Downloads/judo1.jpg" alt="Judo">
+            <div class="service-text"><b>Judo</b></div>
+        </div>
+        <div class="service">
+            <img src="../Downloads/muaythai.jpg" alt="Muay Thai">
+            <div class="service-text"><b>Muay Thai</b></div>
+        </div>
+        <div class="service">
+            <img src="../Downloads/jjk.jpg" alt="Jiu-Jitsu">
+            <div class="service-text"><b>Jiu-Jitsu</b></div>
+        </div>
+        <div class="service">
+            <img src="../Downloads/karate.jpg" alt="Karate">
+            <div class="service-text"><b>Karate</b></div>
+        </div>
+    </div>
+
+    <!-- Facilities Section -->
+<div class="facilities">
+    <div class="facility">
+        <img src="../Documents/Unnamed Site 2/istockphoto-1153640349-612x612.jpg" alt="Spacious Dojo">
+        <h3>Spacious Dojo</h3>
+        <p>Train in our state-of-the-art dojo equipped with modern facilities and ample space for group and individual training sessions.</p>
+    </div>
+    <div class="facility">
+        <img src="../Documents/Unnamed Site 2/1634848852780.jpg" alt="Indoor Training Facility">
+        <h3>Indoor Training Facility</h3>
+        <p>Enjoy training regardless of weather conditions in our climate-controlled indoor facility designed for comfort and focus.</p>
+    </div>
+    <div class="facility">
+        <img src="../Documents/Unnamed Site 2/karate.jpg" alt="Mixed Martial Arts">
+        <h3>Mixed Martial Arts</h3>
+        <p>Explore a variety of martial arts disciplines under one roof, including judo, Muay Thai, Jiu-Jitsu, and karate.</p>
+    </div>
+    <div class="facility">
+        <img src="../Documents/Unnamed Site 2/sauna-253938_640.jpg" alt="Sauna">
+        <h3>Sauna and Locker Room</h3>
+        <p>Relax and rejuvenate in our sauna facilities and fully-equipped locker rooms after an intense training session.</p>
+    </div>
+	 <div class="form-section">
+        <div class="form-container" id="login-form">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        <div class="form-container" id="register-form">
+            <h2>Register</h2>
+          
+            <input type="email" id="register-email" placeholder="Email">
+            <input type="password" id="register-password" placeholder="Password">
+            <button onclick="register()">Register</button>
+        </div>
+</div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <img src="../Downloads/RoCu_Martial_Arts__1_-removebg-preview.png" alt="RoCu Logo">
+                <p>&copy; 2024 RoCu Martial Arts. All rights reserved.</p>
+                <p>Trademark of RoCu Martial Arts</p>
+            </div>
+            <div>
+                <p>Phone: +123-456-7890</p>
+                <p>Email: info@rocumartialarts.com</p>
+                <p><a href="#home">Back to top</a></p>
+            </div>
+		
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+   
+    <script src="index.js"></script>
+
+</body>
+</html>
